@@ -1,0 +1,88 @@
+Git Commands:
+
+1.  mkdir (folder name) :-it will make new folder.
+2.  git status :- It will tell this the status of git file if it is a git repository otherwise it will show  not a git repository.
+3. git init :- Go to the respective folder and put this command it will make the folder as git repository and start tracking.
+4. dir/dr :- it will list all the files in your folder.
+5. git clone  (URL of GitHub directory)  (folder name)  :- use this command to clone any GitHub repository from the GitHub in your local pc.
+6. git diff :- it will tell what changes you did in the project after taking the project from GitHub or you created the project before pushing the. 
+7. git log :- it will show all the commit history with author name and date but it will not show the modified file and the modified content.
+8. git log (number) :- it will show the log of specified number.
+9. git log -p :- it will show what are the file which id modified and the content of the files also.
+10. git log --oneline :- It will show all the id and only and the messages of the commit.
+11. git log --stat :- it will show how many files is modified but  not the actual modified content.
+12. git show (commit id) :- It will show what are the changes we did in the particular commit. Use first git log it will show all the id and take the particular commit id to view the changes and use this command.
+13. git add (file name) :- if we create a file and want to tell git to track the file then we use git add command.
+14. git add . :- It will add all add all the files to trace but it is not recommended because some file which you don't want to add it will add that also.
+15. git commit -m "message" :- it is used to commit the file permanently and take one message when you do commit. It is mandatory to use git add command before git commit. After the commit if you use git status then it will show no commit because no modification we did after the commit. 
+If you use git log then it will show the commit id and time.
+16. git commit -am "message" :-it will add as well as commit .
+17. git restore (file name) :- it will remove the changes you did in the project/directory .We will use this command before git add then only it will work. If we use this command then it will restore in head and head is pointing where you did the last commit in the repository.
+
+Git Ignore 
+
+Note :- If you do not want to track some files in your git project/repository for that you need to make one more file and name as ".gitignore" and 
+               then you store the name/path/pattern(*.txt) of the files inside the ".gitignore" file so git will not trace the files which you putted inside ".gitignore" folder.
+
+18.  .gitignore :- if you want to tell that don't trace this files then you need to put that files name inside .gitignore so git will not trace that files.
+
+Branching  
+
+19. git branch :- it will show the current branch where we are at this point.
+20. git branch (branch name) :- it will make a new branch with the specified file name. 
+21. git checkout (branch name) :- we can switch from one branch to another branch.
+22. git checkout -b (branch name) :- it will make the branch as well as it will switch to that branch.
+
+Merging
+
+23. git merge (branch name) :- it will merge the branch with the master branch .
+Note :- If you want to merge the branch then you need to first go to the master branch or the branch you want to merge into.
+24. git branch -d (branch name) :- it will delete the branch.
+
+Tagging
+
+25. git tag -a (tag name) (id) -m "message" :- it will tag the particular commit.
+26. git tag -d (tag name) :- it will delete the particular tag.
+
+Git Stash
+
+27. git stash :- it will move to stash area(temporary area). 
+Note :- we will use this command when we changed some files in our project and not committed and  we are pulling the file from remote and someone changed the same file on remote then git will not able to decide and it will show error. So for that we need to fitst put our code in stash
+and then pull the repository from remote. Once the pulling done then we can remove from the stash and take our files but it will create conflict we need to solve that manually.
+
+28. git stash list :- it will show all the stash list.
+
+29. git stash apply:- it will bring back the project from stash to the directory. It will show unmerged path.so we need to solve the merging conflict.
+
+Undo Commits
+
+30. git revert (id) :- it will revert the particular commit for the given commit id.
+
+31. git reset --soft (id) :- Your modification will show as staged  and it will reset your head to the given id.
+
+32. git reset --mixed (id) :- Your working directory changes will intact and it will show as a modification but the head will reset and went to given id. 
+
+33. git reset --hard (id) :- it will reset the index till the given id and it will remove the local/modified changes done by you. It is not recommended to use.
+
+34. git commit --amend :- it will change the commit message you can only use this command in the most recent commit.
+
+35. git remote add origin https://github.com/Sahil-Arsalan/myrepo.git :- it will map from my local to remote (GitHub).
+
+36. git push -u origin master :- It will push the commits from your local pc to remote(GitHub).It will only push commits if you will not commit and try to push it then it will not work. 
+
+
+
+how to push into GitHub from your local :-
+
+1. create a GitHub account
+2. create a empty repo in you GitHub account 
+3. create a repo in your local pc with the same name which you putted in your GitHub account.
+4. git config --global user.name "username" 
+5. git config --global user.email "email"
+6. git push -u origin master
+   6.1  username ->Sahil-Arsalan
+   7.1   password ->go to your GitHub setting. Then to your developer settings. Click on personal access token then go to Tokens(classic).
+				    Click on generate new token then generate new token(classic). Give the name what you want eg:- access token. Click 
+				    on expiration and select no expiration and select all the boxes then click on generate token.Copy the generate token and use 
+				    the token as password.
+
