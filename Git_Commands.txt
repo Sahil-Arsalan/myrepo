@@ -86,3 +86,4 @@ how to push into GitHub from your local :-
 				    on expiration and select no expiration and select all the boxes then click on generate token.Copy the generate token and use 
 				    the token as password.
 
+git command finished.
